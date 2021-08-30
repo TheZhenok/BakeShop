@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Enter info!</p>
+<div>
+    <form method="post">
+        <input type="text" name="name" placeholder="Enter name bake!">
+        <input type="text" name="price" placeholder="Enter price bake!">
+        <button type="submit">Enter</button>
+    </form>
+</div>
+<div th:each="bake : ${all}">
+    <p th:text="${bake.getName()}"></p>
+</div>
+
+</body>
+</html>
